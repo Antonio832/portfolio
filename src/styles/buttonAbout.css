@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('./fonts/YoungSerif-Regular.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mainBtn{
+    font-family: YoungSerif;
+    font-size: 20px;
+    z-index: 22;
+    color: white;
+    cursor: none;
+    position: relative;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-block: 3px;
+    text-decoration: dotted black 3px;
+}
+
+.mainBtn>p{
+    margin: 0;
+}
+
+.mainBtn::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    transition: width .5s ease;
+}
+
+.mainBtn:hover::before{
+    transition: width .5s ease;
+    width: 100%;
+    border-radius: 0 99rem 99rem 0;
+    border: 1px solid white;
+}
+
