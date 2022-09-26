@@ -195,7 +195,7 @@ const StarCanvas = () => {
         p5.createCanvas(dim.clientWidth, dim.clientHeight).parent(parentRef)
         flock = new Flock();
         // Add an initial set of boids into the system
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 65; i++) {
             let b = new Boid(p5.constructor.width / 2, p5.constructor.height / 2, p5);
             flock.addBoid(b);
         }

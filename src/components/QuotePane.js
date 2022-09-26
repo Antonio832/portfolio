@@ -1,6 +1,7 @@
 import React, {  useEffect, useState }from 'react';
 import '../styles/Pane.css'
 
+
 const QuotePane = () => {
 
     const [quote, setQuote] = useState('')

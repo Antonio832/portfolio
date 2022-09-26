@@ -16,7 +16,12 @@ package-lock.json
 /src/reportWebVitals.js
 /src/App.test.js
 /src/assets
-/src/styles/fonts
+/src/styles/fonts/stylesheet.css
+/src/styles/fonts/YoungSerif-Regular.svg
+/src/styles/fonts/YoungSerif-Regular.ttf
+/src/styles/fonts/YoungSerif-Regular.woff
+/src/styles/fonts/YoungSerif-Regular.woff2
+
 
 # testing
 /coverage
