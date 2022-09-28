@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/MainGrid.css'
 import ContactPane from './ContactPane';
 import NamePane from './NamePane';
@@ -6,20 +6,39 @@ import ProjectsPane from './ProjectsPane';
 import QuotePane from './QuotePane';
 import StarCanvas from './StarCanvas';
 
-class MainGrid extends Component {
-    render() {
-        return (
-            <div className='mainGrid'>
-                <div className='flockingCont'>
-                    <StarCanvas></StarCanvas>
-                </div>
-                <QuotePane/>
-                <ProjectsPane/>
-                <NamePane/>
-                <ContactPane/>
-            </div>
-        );
+const MainGrid = () => {
+
+    const [width, setWidth] = useState(window.innerWidth)
+
+    const handleWindowSize = ()=>{
+        setWidth(window.innerWidth)
     }
+
+    useEffect(()=>{
+        window.addEventListener('resize', handleWindowSize)
+        return window.removeEventListener('resize', handleWindowSize)
+    }, [])
+
+    const isMobile = width <= 1000 ? true : false
+
+    return (
+        !isMobile ?
+        <div className='mainGrid'>
+            <div className='flockingCont'>
+                <StarCanvas count={65}></StarCanvas>
+            </div>
+            <QuotePane/>
+            <ProjectsPane/>
+            <NamePane/>
+            <ContactPane/>
+        </div>
+        :
+        <div className='mainGridMobile'>
+            <div className='flockingCont'>
+                <StarCanvas count={25}></StarCanvas>
+            </div>
+        </div>
+    )
 }
 
 export default MainGrid;

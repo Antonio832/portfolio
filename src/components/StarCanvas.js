@@ -1,7 +1,7 @@
 import React from 'react';
 import Sketch from 'react-p5';
 
-const StarCanvas = () => {
+const StarCanvas = ({count}) => {
 
     let history = []
 
@@ -195,7 +195,7 @@ const StarCanvas = () => {
         p5.createCanvas(dim.clientWidth, dim.clientHeight).parent(parentRef)
         flock = new Flock();
         // Add an initial set of boids into the system
-        for (let i = 0; i < 65; i++) {
+        for (let i = 0; i < count; i++) {
             let b = new Boid(p5.constructor.width / 2, p5.constructor.height / 2, p5);
             flock.addBoid(b);
         }
@@ -207,29 +207,31 @@ const StarCanvas = () => {
         flock.run(p5);
         // Disable cursor
         // Display clear background
-        p5.beginShape()
-        for (let i = 0; i < history.length; i++) {
-            let pos = history[i];
-            let alphaIndex = 1 / (i * 3)
-            let colorString = 'rgba(255,255,255,' + alphaIndex + ')'
-            p5.noFill();
-            p5.stroke(p5.color(colorString))
-            p5.vertex(pos.x, pos.y);
-            p5.endShape();
-        }
-        p5.strokeWeight(1)
-        // Set fill color for shapes
-
-        p5.stroke(255)
-        // Draw ellipse on mouse position
-        p5.ellipse(p5.mouseX,p5.mouseY, 5);
-
-        let v = p5.createVector(p5.mouseX, p5.mouseY);
-
-        history.push(v);
-
-        if (history.length > 15) {
-            history.splice(0, 1);
+        if(count === 65){
+            p5.beginShape()
+            for (let i = 0; i < history.length; i++) {
+                let pos = history[i];
+                let alphaIndex = 1 / (i * 3)
+                let colorString = 'rgba(255,255,255,' + alphaIndex + ')'
+                p5.noFill();
+                p5.stroke(p5.color(colorString))
+                p5.vertex(pos.x, pos.y);
+                p5.endShape();
+            }
+            p5.strokeWeight(1)
+            // Set fill color for shapes
+            
+            p5.stroke(255)
+            // Draw ellipse on mouse position
+            p5.ellipse(p5.mouseX,p5.mouseY, 5);
+            
+            let v = p5.createVector(p5.mouseX, p5.mouseY);
+            
+            history.push(v);
+            
+            if (history.length > 15) {
+                history.splice(0, 1);
+            }
         }
         // p5.ellipse(p5.mouseX, p5.mouseY, 20)
 
