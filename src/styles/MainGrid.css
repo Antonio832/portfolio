@@ -1,8 +1,30 @@
 .mainGrid{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
     background-color: rgb(75,75, 75);
+}
+
+.mainGridMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.flockingContMobile{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.space{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
 }

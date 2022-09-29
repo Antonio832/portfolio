@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/MainGrid.css'
 import ContactPane from './ContactPane';
+import NamePaneMobile from './mobile/NamePaneMobile';
 import NamePane from './NamePane';
 import ProjectsPane from './ProjectsPane';
 import QuotePane from './QuotePane';
@@ -34,9 +35,11 @@ const MainGrid = () => {
         </div>
         :
         <div className='mainGridMobile'>
-            <div className='flockingCont'>
+            <div className='flockingContMobile'>
                 <StarCanvas count={25}></StarCanvas>
             </div>
+            <NamePaneMobile />
+            <div className='space'>aa</div>
         </div>
     )
 }

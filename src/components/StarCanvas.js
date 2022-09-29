@@ -191,7 +191,8 @@ const StarCanvas = ({count}) => {
     //END      
 
     const setUpBack = (p5, parentRef) =>{
-        const dim = document.getElementsByClassName('flockingCont')[0]
+        const dim = document.getElementsByClassName('flockingCont')[0] ? document.getElementsByClassName('flockingCont')[0] : document.getElementsByClassName('flockingContMobile')[0]
+        
         p5.createCanvas(dim.clientWidth, dim.clientHeight).parent(parentRef)
         flock = new Flock();
         // Add an initial set of boids into the system
