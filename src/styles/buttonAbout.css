@@ -41,3 +41,10 @@
     border: 1px solid white;
 }
 
+@media (max-width: 1000px) {
+    .mainBtn::before{
+        width: 100%;
+        border-radius: 0 99rem 99rem 0;
+        border: 1px solid white;
+    }    
+}

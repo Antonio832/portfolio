@@ -39,7 +39,6 @@ const MainGrid = () => {
                 <StarCanvas count={25}></StarCanvas>
             </div>
             <NamePaneMobile />
-            <div className='space'>aa</div>
         </div>
     )
 }

@@ -10,9 +10,17 @@
     color: white;
     z-index: 555;
     font-size: 3em;
-    width: 100%;
-    height: 80vh;
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    position: relative;
+}
+
+.letters{
+    width: 100vw;
+    height: 80vh;
     position: relative;
 }
 
@@ -21,61 +29,81 @@
     display: flex;
     top: 50%;
     left: 50%;
-    --letterAnimation: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+    overflow: hidden;
+    --letterAnimation: ease;
+    --letterAnimDuration: 2s;
 }
 
 #mobileA{
-    translate: -2.5em -1.5em;
-    animation: animateA 1s var(--letterAnimation);
+    --ATranslate: -2.5em -1.5em;
+    translate: var(--ATranslate);
+    animation: animateA var(--letterAnimDuration) var(--letterAnimation);
 }
 
 @keyframes animateA {
-    0%{
+    0%,50%{
         translate: -1em;
     }
     100%{
-        translate: -2.5em -1.5em;
+        translate: var(--ATranslate);
     }
 }
 
 #mobileM{
-    translate: -2.5em;
-    animation: animateM 1s var(--letterAnimation);
+    translate: -1.8em;
+    animation: animateM var(--letterAnimDuration) var(--letterAnimation);
 }
 
 @keyframes animateM {
-    0%{
+    0%,50%{
         translate: 0;
     }
     100%{
-        translate: -2.5em;
+        translate: -1.8em;
     }
 }
 
 #mobileV{
-    translate: -2.5em 1.5em;
-    animation: animateV 1s var(--letterAnimation);
+    --VTranslate: -1.4em 1.5em;
+    translate: var(--VTranslate);
+    animation: animateV var(--letterAnimDuration) var(--letterAnimation);
 }
 
 @keyframes animateV {
-    0%{
+    0%,50%{
         translate: 1.1em;
     }
     100%{
-        translate: -2.5em 1.5em;
+        translate: var(--VTranslate);
     }
 }
 
 .rest{
     opacity: 1;
-    animation: animateRest 1s var(--letterAnimation);
+    animation: animateRest var(--letterAnimDuration) var(--letterAnimation);
 }
 
 @keyframes animateRest {
-    0%{
+    0%,50%{
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
+}
+
+.buttonsAbout{
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-inline: auto;
+    width: max-content;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.isVisible{
+    translate: 0 -2rem;
+    opacity: 1;
 }

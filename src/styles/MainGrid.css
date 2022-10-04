@@ -11,12 +11,14 @@
     flex-direction: column;
     justify-content: center;
     width: 100vw;
+    z-index: 5;
     height: auto;
     position: relative;
+    overflow-x: hidden;
 }
 
 .flockingContMobile{
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: -1;
     width: 100vw;
@@ -25,6 +27,6 @@
 
 .space{
     width: 100vw;
-    height: 100vh;
+    height: 300vh;
     background-color: red;
 }
