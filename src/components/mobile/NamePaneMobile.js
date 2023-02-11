@@ -4,12 +4,14 @@ import ButtonAbout from '../buttonAbout';
 
 const NamePaneMobile = () => {
 
-    const [isVisible, setVisible] = useState(true)
+    const [isVisible, setVisible] = useState(false)
     const domRef = useRef()
 
     useEffect(()=>{
         const observer = new IntersectionObserver(entries =>{
             entries.forEach(entry=>setVisible(entry.isIntersecting))
+        },{
+            rootMargin: '900px'
         })
         observer.observe(domRef.current)
         return () => observer.unobserve
