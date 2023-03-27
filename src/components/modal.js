@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import '../styles/modalStyles/modal.css'
 import AboutMe from './modalComps/aboutMe';
-function Modal({text, type, sections}) {
+function Modal({text, type}) {
     const [showModal, setShowModal] = useState(false)
 
     return (
@@ -15,8 +15,7 @@ function Modal({text, type, sections}) {
                     <span className="close" onClick={() => setShowModal(false)}>
                         &times;
                     </span>
-                    {type === "abtMe" ? 
-                    <AboutMe /> : <></>}
+                    {type === "abtMe" ? <AboutMe /> : <></>}
                 </div>
             </div>
       )}

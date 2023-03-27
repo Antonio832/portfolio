@@ -1,17 +1,17 @@
 .modal {
     display: flex;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     left: 0px;
     top: 0px;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.61);
     cursor: default;
-}
-
-/* Modal content */
-.modal-content {
+  }
+  
+  /* Modal content */
+  .modal-content {
     position: relative;
     cursor: default;
     background-color: #000000;
