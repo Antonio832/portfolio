@@ -1,0 +1,49 @@
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.61);
+    cursor: default;
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    cursor: default;
+    background-color: #000000;
+    padding-block: 20px;
+    border-radius: 1rem;
+    padding-inline: 20px;
+    margin-block: auto;
+    margin-inline: auto;
+    border: 1px solid #888;
+    width: 80%;
+    height: 90%;
+  }
+
+.modalAbtMe{
+    display: flex;
+    gap: 1rem;
+}
+  
+  /* Close button */
+.close {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #6e6e6e;
+  text-decoration: none;
+  cursor: pointer;
+}

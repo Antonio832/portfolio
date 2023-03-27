@@ -1,6 +1,6 @@
 import React, {  useState, useLayoutEffect} from 'react';
 import '../styles/Pane.css'
-import ButtonAbout from './buttonAbout';
+import Modal from './modal'
 
 const NamePane = () => {
 
@@ -34,8 +34,8 @@ const NamePane = () => {
             </div>
             {isHover ? 
                 <div className='aboutProject'>
-                    <ButtonAbout texto={'About me'}/>
-                    <ButtonAbout texto={'About this project'}/>
+                    <Modal text={'About me'} type="abtMe"/>
+                    <Modal text={'About this project'} />
                 </div> : null 
             }
         </div>
