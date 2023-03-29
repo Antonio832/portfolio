@@ -1,5 +1,5 @@
 .left{
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,4 +9,39 @@
     width: 80%;
     border-radius: 999vw;
     object-fit: contain;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btnGraph{
+    background-color: black;
+    padding-inline: .5rem;
+    padding-block: .5rem;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid silver;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.anim{
+    content: '';
+    z-index: 9999;
+    background-color: red;
+    height: 100%;
+    animation: anim 1s ease-in-out;
+}
+
+@keyframes anim {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 100%;
+    }
 }
