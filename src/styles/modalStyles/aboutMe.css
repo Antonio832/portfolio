@@ -1,5 +1,10 @@
+.modalAbtMe{
+    width: 100%;
+    max-height: 100%;
+}
+
 .left{
-    width: 40%;
+    min-width: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +14,15 @@
     width: 80%;
     border-radius: 999vw;
     object-fit: contain;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow-y: scroll;
+    background-color: rgba(0, 255, 255, 0.295);
+    padding-right: 1rem;
 }
 
 .cont{
@@ -35,6 +49,25 @@
     height: 100%;
     animation: anim 1s ease-in-out;
 }
+
+/* Width and color of scrollbar track */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f500;
+}
+
+/* Style of scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #A9A9A9;
+    border-radius: 10px;
+}
+
+/* Style of scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #606060;
+}
+  
+
 
 @keyframes anim {
     0%{

@@ -22,11 +22,11 @@ function AboutMe() {
                         real-world challenges.
                     </div>
                     <div className='sect'>
-                        <span style={{color:"blue"}}>
+                        <span style={{color:"red"}}>
                             [
                         </span>
                         &nbsp;-&nbsp;
-                        <span style={{color:"blue"}}>
+                        <span style={{color:"red"}}>
                             ] 
                         </span>
                         &nbsp;Skillset 
@@ -64,11 +64,47 @@ function AboutMe() {
                         </>
                     }
                     <div>
-                        I have some experience developing web applications with Angular and Firebase which are shown here, I also like
-                        to design UI components and have been using Material for better UI/UX in most of this apps. I am a quick learner, so it is easy to me
-                        to adapt to new lenguages and challenges.
+                        I have some experience developing web applications with Angular and Firebase, which are showcased here. I also enjoy designing UI components and have been using Material to improve the UI/UX in most of these apps. I am a quick learner, so it is easy for me to adapt to new languages and challenges.
                     </div>
 
+                    <div className='sect'>
+                        <span style={{color:"green"}}>
+                            [
+                        </span>
+                        &nbsp;-&nbsp;
+                        <span style={{color:"green"}}>
+                            ] 
+                        </span>
+                        &nbsp;Experience 
+                    </div>
+                    
+                    <div>
+                        I've been programming since I was in highschool but started my own projects until I started college, mainly focusing on FullStack development, but also showing intrest in media creation like editing images in Photoshop, creating logos on Illustrator and video editing.
+                        <br/>
+                        Mixed skills:
+                        <ul>
+                            <li>
+                                Media: Photoshop, Lightroom, Illustrator, Premier Pro, DaVinci Resolve.
+                            </li>
+                            <li>
+                                Other: Star UML, AutoCAD, OracleVM.
+                            </li>
+                            <li>
+                                Basics: Microsoft Word, Excel, Power Point.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className='sect'>
+                        <span style={{color:"blue"}}>
+                            [
+                        </span>
+                        &nbsp;-&nbsp;
+                        <span style={{color:"blue"}}>
+                            ] 
+                        </span>
+                        &nbsp;Vision 
+                    </div>
                 </div>
             </div>
 
