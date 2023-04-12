@@ -30,7 +30,7 @@ function AboutMe() {
                             ] 
                         </span>
                         &nbsp;Skillset 
-                        <button className='btnGraph' onClick={() => setGraphState(!showGraphs)}>Show skillset graph</button>
+                        {/* <button className='btnGraph' onClick={() => setGraphState(!showGraphs)}>Show skillset graph</button> */}
                     </div>
 
                     {
@@ -105,9 +105,9 @@ function AboutMe() {
                         </span>
                         &nbsp;Vision 
                     </div>
-
-                    <div>
                         
+                    <div style={{paddingBottom: '3rem'}}>
+                        When it comes to work, I really think that having a clear vision is essential. It's important to know what you're aiming for and to work with others who share your goals. I feel really comfortable working on teams, and I'm not afraid to take on responsibility and lead when needed. To me, respect is key and believe that everyone has something valuable to contribute. I'm always open to hearing other people's ideas and also constructive criticism - I believe in the virtue of improving and learning new things with a sence of discipline. Overall, I want to create a positive and supportive environment where everyone can do their best while still delivering a great experience for users and clients.
                     </div>
                 </div>
             </div>
