@@ -11,8 +11,10 @@
 }
 
 .profilePhoto{
-    width: 80%;
-    border-radius: 999vw;
+    display: none;
+    max-width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
     object-fit: contain;
 }
 
@@ -21,7 +23,6 @@
     flex-direction: column;
     max-height: 100%;
     overflow-y: scroll;
-    background-color: rgba(0, 255, 255, 0.295);
     padding-right: 1rem;
 }
 
@@ -53,6 +54,8 @@
 /* Width and color of scrollbar track */
 ::-webkit-scrollbar {
     width: 8px;
+    height: 90%;
+    margin-top: 1rem;
     background-color: #f5f5f500;
 }
 
