@@ -35,7 +35,7 @@ const NamePane = () => {
             {isHover ? 
                 <div className='aboutProject'>
                     <Modal text={'About me'} type="abtMe"/>
-                    <Modal text={'About this project'} />
+                    <Modal text={'About this project'} type={"abtPro"} />
                 </div> : null 
             }
         </div>

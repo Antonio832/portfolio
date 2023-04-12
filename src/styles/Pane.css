@@ -269,3 +269,7 @@ body{
 .github svg{
     scale: 1.5;
 }
+
+#v{
+    padding-right: 5px;
+}

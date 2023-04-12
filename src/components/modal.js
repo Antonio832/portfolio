@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import '../styles/modalStyles/modal.css'
 import AboutMe from './modalComps/aboutMe';
+import AboutProject from './modalComps/aboutProject';
 function Modal({text, type}) {
     const [showModal, setShowModal] = useState(false)
 
@@ -16,6 +17,8 @@ function Modal({text, type}) {
                         &times;
                     </span>
                     {type === "abtMe" ? <AboutMe /> : <></>}
+                    {type === "abtPro" ? <AboutProject /> : <></>}
+                    
                 </div>
             </div>
       )}
