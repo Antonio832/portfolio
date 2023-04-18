@@ -23,7 +23,7 @@ function AboutProject() {
                 <br/>
                 <br/>
                     <a href='https://type.fit/api/quotes/' target='blank'>
-                        Here is the Api endpoint
+                        🔗 Here is the Api endpoint
                     </a>
                 <br/>
                 <br/>
@@ -33,7 +33,7 @@ function AboutProject() {
                 <br/>
                 <br/>
                 <a href='https://github.com/Antonio832/portfolio' target='blank'>
-                    Check the repo here
+                    🔗 Check the repo here
                 </a>
             </div>
         </div>

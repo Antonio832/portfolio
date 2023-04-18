@@ -7,8 +7,8 @@ const ProjectsPane = () => {
 
     const projects = [
         {
-            name: 'Web apps',
-            class: 'apps'
+            name: 'Projects',
+            class: 'prjcts'
         },
         {
             name: 'Medium articles',
