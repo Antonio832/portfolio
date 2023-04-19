@@ -87,7 +87,7 @@ const StarCanvas = ({count}) => {
     Boid.prototype.render = function(p5) {
         // Draw a triangle rotated in the direction of velocity
         let theta = this.velocity.heading() + p5.radians(90);
-        p5.fill(127);
+        p5.noFill();
         p5.stroke(200);
         p5.push();
         p5.translate(this.position.x, this.position.y);
@@ -230,7 +230,7 @@ const StarCanvas = ({count}) => {
             
             history.push(v);
             
-            if (history.length > 15) {
+            if (history.length > 10) {
                 history.splice(0, 1);
             }
         }
