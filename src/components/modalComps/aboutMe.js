@@ -10,7 +10,7 @@ function AboutMe() {
     return (
         <div className='modalAbtMe'>
             <div className='left'>
-                <img src={require('../../assets/imgs/IMG_6727.JPG')} className='profilePhoto' alt='me'/>
+                {/* <img src={require('../../assets/imgs/IMG_6727.JPG')} className='profilePhoto' alt='me'/> */}
             </div>
             <div className='right'>
                 <h2>About me</h2>

@@ -57,6 +57,64 @@ body{
     background-color: transparent;
 }
 
+.hoverMe {
+    top: 25%;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    position: absolute;
+    padding-inline: 1rem;
+    padding-block: .25rem;
+    animation: hoverMe 4s infinite;
+}
+
+@keyframes hoverMe{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0;
+    }
+}
+  
+.hoverMe::before,
+.hoverMe::after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+  
+.hoverMe::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-top-left-radius: 8px;
+    width: 10px;
+    height: 10px;
+}
+  
+.hoverMe::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom-right-radius: 8px;
+    width: 10px;
+    height: 10px;
+}
+
+.namePane:hover .hoverMe{
+    display: none;
+}
+
 .quote{
     display: flex;
 }

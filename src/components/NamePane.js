@@ -5,6 +5,7 @@ import Modal from './modal'
 const NamePane = () => {
 
     const [isHover, setHoverState] = useState(false)
+    const [hoverCount, setHoverCount] = useState(0)
 
     useLayoutEffect(()=>{
     }, [])
@@ -12,6 +13,7 @@ const NamePane = () => {
     const mouseEnter = () =>{
         document.getElementById('name').classList.remove('simple')
         document.getElementById('name').classList.add('expanded')
+        setHoverCount(hoverCount + 1)
         setHoverState(true)
     }
     
@@ -27,6 +29,7 @@ const NamePane = () => {
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseLeave}
         >
+            {hoverCount < 2 ? <div className='hoverMe'>Hover me!</div> : null}
             <div id='name' className='simple'>
                 <div id='a' className='letter'>A{isHover ? 'ntonio' : null}</div>
                 <div id='m' className='letter'>M{isHover ? 'edina' : null}</div>
