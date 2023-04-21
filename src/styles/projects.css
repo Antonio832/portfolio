@@ -96,3 +96,87 @@
     margin: auto;
     scale: .6;
 }
+
+.scrollD{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 45px;
+    height: 70px;
+    display: flex;
+    justify-content:flex-end;
+    animation: hoverMe 4s infinite;
+    scale: .8;
+}
+
+
+
+@keyframes hoverMe{
+    0%,100%{
+        opacity: 0;
+    }
+    50%,70%{
+        opacity: .75;
+    }
+}
+
+.scrollD span::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: translateY(-10px) rotate(135deg);
+    left: -6px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: ani 1.8s infinite linear;
+}
+
+.scrollD span::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: translateY(-10px) rotate(135deg);
+    left: -6px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: scrollDownAnimation 2s infinite linear;
+    animation-delay: 0.8s;
+}
+
+.scrollD span::after,
+.scrollD span::before{
+    translate: -10px 0;
+}
+
+@keyframes scrollDownAnimation {
+    0% {
+        margin-top: 10px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+}
+
+.scrollTitle{
+    position: absolute;
+    top: -65%;
+    margin-right: 1rem;
+    text-align: center;
+    width: max-content;
+}

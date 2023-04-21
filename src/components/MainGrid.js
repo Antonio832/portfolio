@@ -28,9 +28,9 @@ const MainGrid = () => {
             <div className='flockingCont'>
                 <StarCanvas count={65}></StarCanvas>
             </div>
-            <QuotePane/>
-            <ProjectsPane/>
             <NamePane/>
+            <ProjectsPane/>
+            <QuotePane/>
             <ContactPane/>
         </div>
         :

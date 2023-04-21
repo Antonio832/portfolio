@@ -8,22 +8,20 @@ const NamePane = () => {
     const [hoverCount, setHoverCount] = useState(0)
 
     useLayoutEffect(()=>{
+      
     }, [])
-
+        
     const mouseEnter = () =>{
         document.getElementById('name').classList.remove('simple')
         document.getElementById('name').classList.add('expanded')
-        document.getElementById('hoverMe').classList.add('invisible')
         setHoverCount(hoverCount + 1)
         setHoverState(true)
     }
     
     const mouseLeave = () =>{
-        setTimeout(()=>{
-            document.getElementById('name').classList.remove('expanded')
-            document.getElementById('name').classList.add('simple')
-            setHoverState(false)
-        }, 2000)
+        document.getElementById('name').classList.remove('expanded')
+        document.getElementById('name').classList.add('simple')
+        setHoverState(false)
     }
 
     return (
