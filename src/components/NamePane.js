@@ -13,14 +13,17 @@ const NamePane = () => {
     const mouseEnter = () =>{
         document.getElementById('name').classList.remove('simple')
         document.getElementById('name').classList.add('expanded')
+        document.getElementById('hoverMe').classList.add('invisible')
         setHoverCount(hoverCount + 1)
         setHoverState(true)
     }
     
     const mouseLeave = () =>{
-        document.getElementById('name').classList.remove('expanded')
-        document.getElementById('name').classList.add('simple')
-        setHoverState(false)
+        setTimeout(()=>{
+            document.getElementById('name').classList.remove('expanded')
+            document.getElementById('name').classList.add('simple')
+            setHoverState(false)
+        }, 2000)
     }
 
     return (
@@ -29,7 +32,11 @@ const NamePane = () => {
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseLeave}
         >
-            {hoverCount < 2 ? <div className='hoverMe'>Hover me!</div> : null}
+            {hoverCount < 1 ? 
+                <div id='hoverMe'>
+                    Hover me!
+                </div> 
+            : null}
             <div id='name' className='simple'>
                 <div id='a' className='letter'>A{isHover ? 'ntonio' : null}</div>
                 <div id='m' className='letter'>M{isHover ? 'edina' : null}</div>

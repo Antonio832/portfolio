@@ -57,62 +57,58 @@ body{
     background-color: transparent;
 }
 
-.hoverMe {
+#hoverMe {
     top: 25%;
     background-color: transparent;
     border: none;
     border-radius: 8px;
     position: absolute;
     padding-inline: 1rem;
-    padding-block: .25rem;
-    animation: hoverMe 4s infinite;
+    padding-block: .35rem;
+    animation: hoverMeA 4s infinite;
+    opacity: 1;
+    --b: 2px;   /* thickness of the border */
+    --c: white;   /* color of the border */
+    --w: 10px;  /* width of border */
+    --r: 5px;  /* radius */
+}
+
+#hoverMe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--c,red);
+    padding: var(--b);
+    border-radius: var(--r);
+    -webkit-mask:
+        linear-gradient(  0deg,#000 calc(2*var(--b)),#0000 0) 50% var(--b)/calc(100% - 2*var(--w)) 100% repeat-y,
+        linear-gradient(-90deg,#000 calc(2*var(--b)),#0000 0) var(--b) 50%/100% calc(100% - 2*var(--w)) repeat-x,
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.invisible{
+    display: none;
 }
 
 @keyframes hoverMe{
-    0%{
+    0%,100%{
         opacity: 0;
     }
-    50%{
-        opacity: 1;
+    50%,70%{
+        opacity: .75;
     }
-    70%{
-        opacity: 1;
-    }
-    
-    100%{
-        opacity: 0;
-    }
-}
-  
-.hoverMe::before,
-.hoverMe::after {
-    content: '';
-    display: block;
-    position: absolute;
-}
-  
-.hoverMe::before {
-    top: 0;
-    left: 0;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-top-left-radius: 8px;
-    width: 10px;
-    height: 10px;
-}
-  
-.hoverMe::after {
-    bottom: 0;
-    right: 0;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom-right-radius: 8px;
-    width: 10px;
-    height: 10px;
 }
 
-.namePane:hover .hoverMe{
-    display: none;
+@keyframes hoverMeA{
+    0%,100%{
+        opacity: 0;
+    }
+    50%,70%{
+        opacity: .75;
+    }
 }
 
 .quote{
