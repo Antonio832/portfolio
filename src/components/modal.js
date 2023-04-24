@@ -3,6 +3,7 @@ import '../styles/modalStyles/modal.css'
 import AboutMe from './modalComps/aboutMe';
 import AboutProject from './modalComps/aboutProject';
 import ProjectsModal from './modalComps/projects';
+import MediumArts from './modalComps/mediumArts';
 
 function Modal({text, type, isFromNamePane = false}) {
     const [showModal, setShowModal] = useState(false)
@@ -29,6 +30,7 @@ function Modal({text, type, isFromNamePane = false}) {
                     {type === "abtMe" ? <AboutMe /> : null}
                     {type === "abtPro" ? <AboutProject /> : null}
                     {type === "prjcts" ? <ProjectsModal /> : null}
+                    {type === "medium" ? <MediumArts /> : null}
                     
                 </div>
             </div>
