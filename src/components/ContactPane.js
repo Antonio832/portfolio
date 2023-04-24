@@ -11,9 +11,9 @@ const ContactPane = () => {
             shouldCopy: false
         },
         {
-            label: 'mail',
-            url: 'antoniomedina832@outlook.com',
-            shouldCopy: true
+            label: 'linkedin',
+            url: 'https://www.linkedin.com/in/antonio-medina-654a00238/',
+            shouldCopy: false
         },
         {
             label: 'medium',
@@ -21,8 +21,8 @@ const ContactPane = () => {
             shouldCopy: false
         },
         {
-            label: 'disc',
-            url: '',
+            label: 'mail',
+            url: 'antoniomedina832@outlook.com',
             shouldCopy: true
         },
         {
