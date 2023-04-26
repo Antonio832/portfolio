@@ -4,6 +4,7 @@ import AboutMe from './modalComps/aboutMe';
 import AboutProject from './modalComps/aboutProject';
 import ProjectsModal from './modalComps/projects';
 import MediumArts from './modalComps/mediumArts';
+import UnderConst from './modalComps/underConst';
 
 function Modal({text, type, isFromNamePane = false}) {
     const [showModal, setShowModal] = useState(false)
@@ -31,6 +32,8 @@ function Modal({text, type, isFromNamePane = false}) {
                     {type === "abtPro" ? <AboutProject /> : null}
                     {type === "prjcts" ? <ProjectsModal /> : null}
                     {type === "medium" ? <MediumArts /> : null}
+                    {type === "art" ? <UnderConst /> : null}
+                    {type === "photo" ? <UnderConst /> : null}
                     
                 </div>
             </div>

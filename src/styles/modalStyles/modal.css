@@ -65,3 +65,32 @@ a:hover{
 a:visited {
   color: #ffffff;
 }
+
+.underC{
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  color: white;
+  gap: 1rem;
+  margin: auto;
+  align-items: center;
+  height: 100%;
+}
+
+.wall{
+  width: 10rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.brik{
+  aspect-ratio: 16/9;
+  height: 3rem;
+  border: 1px solid white;
+}
