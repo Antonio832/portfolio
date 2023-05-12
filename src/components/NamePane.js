@@ -1,6 +1,7 @@
 import React, {  useState, useLayoutEffect} from 'react';
-import '../styles/Pane.css'
 import Modal from './modal'
+import PDF from '../assets/Antonio Medina Valenzuela.pdf'
+import '../styles/Pane.css'
 
 const NamePane = () => {
 
@@ -42,8 +43,9 @@ const NamePane = () => {
             </div>
             {isHover ? 
                 <div className='aboutProject'>
-                    <Modal isFromNamePane={true} text={'About me'} type="abtMe"/>
+                    <Modal isFromNamePane={true} text={'About me'} type={"abtMe"}/>
                     <Modal isFromNamePane={true} text={'About this project'} type={"abtPro"} />
+                    <a style={{textDecoration: 'none'}} href={PDF} rel='noreferrer' target='_blank' className='mainBtn B' >Take a look at my CV</a>
                 </div> : null 
             }
         </div>

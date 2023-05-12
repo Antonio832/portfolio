@@ -205,8 +205,8 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-left: 35%;
+    gap: 1rem;
+    margin-left: 45%;
     animation: aboutAnim .5s;
     cursor: none;
 }

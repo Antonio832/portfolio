@@ -12,7 +12,7 @@ function Modal({text, type, isFromNamePane = false}) {
     return (
         <>
             {isFromNamePane ? 
-                <div className='mainBtn' onClick={()=>setShowModal(true)}>
+                <div className={`mainBtn ${type === "abtMe" ? "R" : "G"}` } onClick={()=>setShowModal(true)}>
                     {text}
                 </div>
                 :
